@@ -190,6 +190,91 @@ void print10(int n)
     cout << endl;
   }
 }
+void print11(int n)
+{
+  int a = 6;
+  for (int i = 1; i < n; i++)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << j;
+    }
+    for (int j = a; j > 0; j--)
+    {
+      cout << " ";
+    }
+    a = a - 2;
+    for (int j = i; j > 0; j--)
+    {
+      cout << j;
+    }
+    cout << endl;
+  }
+
+  /*
+  int space = 2*(n-1);
+   for(int i=1;i<n;i++){
+    for(int j=1;j<=i;j++){
+      cout << j;
+    }
+    for(int j=1;j<=space;j++){
+      cout << " ";
+    }
+    for(int j=i;j>=1;j--){
+      cout << j;
+    }
+    cout<<endl;
+    sapce -= 2;
+  }
+  */
+}
+void print12(int n)
+{
+  int a = 1;
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j <= i; j++)
+    {
+      cout << a << " ";
+      a++;
+    }
+    cout << endl;
+  }
+}
+void print13(int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    for (char ch = 'A'; ch <= 'A' + i; ch++)
+    {
+      cout << ch << " ";
+    }
+    cout << endl;
+  }
+}
+void print14(int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    for (char ch = 'A'; ch <= 'A' + (n - 1 - i); ch++)
+    {
+      cout << ch << " ";
+    }
+    cout << endl;
+  }
+}
+void print15(int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    char ch = 'A' + i;
+    for (int j = 0; j <= i; j++)
+    {
+      cout << ch << " ";
+    }
+    cout << endl;
+  }
+}
 int main()
 {
   cout << "Enter the number if rows :";
