@@ -275,6 +275,118 @@ void print15(int n)
     cout << endl;
   }
 }
+void print16(int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < n - i - 1; j++)
+    {
+      cout << "*";
+    }
+    char ch = 'A';
+    int Break = ((1 + 2 * i) / 2) + 1;
+    for (int j = 0; j < 1 + (2 * i); j++)
+    {
+      cout << ch;
+      if (j < Break - 1)
+        ch++;
+      else
+        ch--;
+    }
+    for (int j = 0; j < n - i - 1; j++)
+    {
+      cout << "*";
+    }
+    cout << endl;
+  }
+}
+void print17(int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    for (char ch = 'E' - i; ch <= 'E'; ch++)
+    {
+      cout << ch << " ";
+    }
+    cout << endl;
+  }
+}
+void print18(int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < n - i; j++)
+    {
+      cout << "*";
+    }
+    for (int j = 0; j < (2 * i); j++)
+    {
+      cout << " ";
+    }
+    for (int j = 0; j < n - i; j++)
+    {
+      cout << "*";
+    }
+    cout << endl;
+  }
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j <= i; j++)
+    {
+      cout << "*";
+    }
+    for (int j = 0; j < 8 - (2 * i); j++)
+    {
+      cout << " ";
+    }
+    for (int j = 0; j <= i; j++)
+    {
+      cout << "*";
+    }
+    cout << endl;
+  }
+}
+void print19(int n)
+{
+  int spaces = 2 * n - 2;
+  for (int i = 1; i <= 2 * n - 1; i++)
+  {
+    int starts = i;
+    if (i > n)
+      starts = 2 * n - i;
+    for (int j = 1; j <= starts; j++)
+    {
+      cout << "*";
+    }
+    for (int j = 1; j <= spaces; j++)
+    {
+      cout << " ";
+    }
+    for (int j = 1; j <= starts; j++)
+    {
+      cout << "*";
+    }
+    cout << endl;
+    if (i < n)
+      spaces -= 2;
+    else
+      spaces += 2;
+  }
+}
+void print20(int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < n; j++)
+    {
+      if (i == 0 || i == (n - 1) || j == 0 || j == (n - 1))
+        cout << "*";
+      else
+        cout << " ";
+    }
+    cout << endl;
+  }
+}
 int main()
 {
   cout << "Enter the number if rows :";
