@@ -30,6 +30,31 @@ int secondLargest(vector<int> &arr, int n)
     }
     return sLargest;
 }
+int secondSmallest(vector<int> &arr, int n)
+{
+    int smallest = arr[0];
+    int sSmallest = INT_MAX;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] < smallest)
+        {
+            sSmallest = smallest;
+            smallest = arr[i];
+        }
+        else if (arr[i] > smallest && arr[i] < sSmallest)
+        { // in case arr = { 1, 2, 4, 7, 5}
+            sSmallest = arr[i];
+        }
+    }
+    return sSmallest;
+}
+vector<int> getSecondOrderElements(vector<int> &arr)
+{
+    int n = arr.size();
+    int sLargest = secondLargest(arr, n);
+    int sSmallest = secondSmallest(arr, n);
+    return {sLargest, sSmallest};
+}
 int main(){
     vector<int> arr = {1, 1, 4, 4, 5};
     for (int i = 0; i < 5; i++)
@@ -37,8 +62,9 @@ int main(){
         cout << arr[i] << " ";
     }
 
-    cout << "\nLargest element is :" << LargestElement(arr, 5);
-    cout << "\nLargest element is :" << secondLargest(arr, 5);
+    vector<int> vcc = getSecondOrderElements(arr);
+   cout << "\nSecond Largest element is :" << vcc[1];
+    cout << "\nSecond Largest element is :" << vcc[0];
 
 
     return 0;
